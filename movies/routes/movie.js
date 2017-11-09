@@ -22,11 +22,11 @@ router.get('/:id/addCast', function (req, res) {
 })
 
 router.post('/:id/addCast', function (req, res) {
-    console.log(req.body)
-    if (req.body.role == '') {
-        req.body.role = null
-    }
-    console.log(req.body.role)
+    // console.log(req.body)
+    // if (req.body.role == '') {
+    //     req.body.role = null
+    // }
+    // console.log(req.body.role)
     Model.MovieCast.create({
         CastId: req.body.CastId,
         MovieId: req.params.id,

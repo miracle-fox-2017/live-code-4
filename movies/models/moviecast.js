@@ -5,12 +5,12 @@ module.exports = (sequelize, DataTypes) => {
     CastId: DataTypes.INTEGER,
     role: {
       type: DataTypes.STRING,
-      validate: {
-        notNull: {
-          args: true,
-          msg: 'Tidak Boleh Null'
-        }
-      }
+      // validate: {
+      //   notNull: {
+      //     args: true,
+      //     msg: 'Tidak Boleh Null'
+      //   }
+      // }
     },
     id: {
       autoIncrement: true,
