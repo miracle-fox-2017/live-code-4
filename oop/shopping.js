@@ -23,7 +23,9 @@ class Cart {
     }
   }
   checkout() {
-    return JSON.stringify(this.item);
+    for (let i = 0; i < this.item.length; i++) {
+      console.log(this.item[i]);
+    };
   }
 }
 
