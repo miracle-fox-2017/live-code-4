@@ -46,9 +46,9 @@ class Angkot{
   turun(tujuan){
     // cek tujuan setiap penumpang
     let pos;
-    for(let i =0; i<this.penumpang.length; i++){
+    for(let i = 0; i < this.penumpang.length; i++){
       // bila tujuan penumpang == argumen
-      if(tujuan==this.penumpang[i].tujuan){
+      if(tujuan == this.penumpang[i].tujuan){
         pos = i
       }
     }

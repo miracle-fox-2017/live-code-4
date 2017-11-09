@@ -11,9 +11,9 @@ class Cart{
   removeItem(nama_item){
     //find posisi
     let pos;
-    for(let i=0; i<this.keranjang.length; i++){
+    for(let i = 0; i < this.keranjang.length; i++){
       //if nama item sama
-      if(this.keranjang[i].nama==nama_item){
+      if(this.keranjang[i].nama == nama_item){
         pos = i
       }
     }
@@ -23,9 +23,9 @@ class Cart{
   editItemQuantity(nama_item, qty){
     //find posisi
     let pos;
-    for(let i=0; i<this.keranjang.length; i++){
+    for(let i = 0; i < this.keranjang.length; i++){
       //if nama item sama
-      if(this.keranjang[i].nama==nama_item){
+      if(this.keranjang[i].nama == nama_item){
         pos = i
       }
     }
@@ -40,8 +40,8 @@ class Cart{
     TOTAL BELANJA: 1006000
     */
     let detail = ['DETAIL BELANJA'];
-    for(let i=0;i<this.keranjang.length;i++){
-      detail.push(`${i+1}. ${this.keranjang[i].nama} - ${this.keranjang[i].jumlah} - @${this.keranjang[i].harga_satuan} - total:${this.keranjang[i].harga_satuan * this.keranjang[i].jumlah}`)
+    for(let i = 0; i < this.keranjang.length; i++){
+      detail.push(`${i+1}. ${this.keranjang[i].nama} - ${this.keranjang[i].jumlah} pcs - @ ${this.keranjang[i].harga_satuan} - total:${this.keranjang[i].harga_satuan * this.keranjang[i].jumlah}`)
       this.total += (this.keranjang[i].harga_satuan * this.keranjang[i].jumlah) 
     }
     detail.push(`TOTAL BELANJA: ${this.total}`)
