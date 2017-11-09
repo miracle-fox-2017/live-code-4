@@ -18,5 +18,9 @@ module.exports = (sequelize, DataTypes) => {
     Cast.belongsToMany(models.Movie, { through: models.MovieCast })
     Cast.hasMany(models.MovieCast)
   };
+
+  Cast.prototype.getFullName = function () {
+    return this.first_nama + " " + this.last_name
+  }
   return Cast;
 };

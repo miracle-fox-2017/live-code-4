@@ -12,12 +12,17 @@ app.set('view engine', 'ejs')
 //   secret: ''
 // }))
 
+const movies  = require('./routes/movies')
+const cast  = require('./routes/casts')
+
+
 
 app.get('/', function(req, res){
   res.send('hello world');
 });
 
-// const  = require('./routes/')
-// app.use('/', )
+
+app.use('/movies', movies)
+app.use('/casts', cast)
 
 app.listen(3000);
