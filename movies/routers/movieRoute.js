@@ -27,7 +27,6 @@ router.get('/:id/addCast', (req, res) => {
 })
 
 router.post('/:id/addCast', (req, res) => {
-	if (req.body.role !== "") {
 		Models.MovieCast.create({
 			CastId : +req.body.CastId,
 			MovieId: +req.body.MovieId,
@@ -35,9 +34,6 @@ router.post('/:id/addCast', (req, res) => {
 		}).then(allModelData => {
 			res.redirect('/movies');
 		}).catch(err => res.send(err.message));
-	} else {
-		res.send("Role harus diisi")
-	}
 })
 
 module.exports = router;

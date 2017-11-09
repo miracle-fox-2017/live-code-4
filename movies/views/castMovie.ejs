@@ -15,14 +15,20 @@
 			<td>Role</td>
 		</tr>
 
-		<% movieCast.MovieCasts.forEach( function(movie, index) { %>
-			<tr>
-				<td><%= movie.Movie.name %></td>
-				<td><%= movie.Movie.released_year %></td>
-				<td><%= Helper.getCastAge(+movie.Movie.released_year, +movieCast.birth_year) %></td>
-				<td><%= movie.role %></td>
-			</tr>
-		<%  });  %>
+		<% if (typeof movieCast != "undefined" && movieCast != null) { %>
+			<% movieCast.MovieCasts.forEach( function(movie, index) { %>
+				<tr>
+					<% if (movie.Movie !== null) {%>
+					<td><%= movie.Movie.name  %></td>
+					<td><%= movie.Movie.released_year %></td>
+					<td><%= Helper.getCastAge(+movie.Movie.released_year, +movieCast.birth_year) %></td>
+					<td><%= movie.role %></td>
+					<% } %>
+				</tr>
+			<%  });  %>
+		<% } else { %>
+				<h2>No Movies Yet</h2>
+		<% } %>
 	</table>
 </body>
 </html>
