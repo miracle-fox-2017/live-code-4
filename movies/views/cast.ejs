@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cast</title>
+</head>
+
+<body>
+    <%- include ./partials/menu.ejs %>
+    <a href="/casts/add">add cast</a>
+    <table border="1">
+        <tr>
+            <td>Full Name</td>
+            <td>Birth Year</td>
+            <td>Gender</td>
+            <td>See Movie</td>
+            <td>Action</td>
+        </tr>
+        <% dataMovies.forEach((row) => { %>
+            <tr>
+                <td>
+                    <%= row.getFullname() %>
+                </td>
+                <td>
+                    <%= row.birth_year %>
+                </td>
+                <td>
+                    <%= row.gender %>
+                </td>
+                <td>
+                    <a href="/casts/seemovie/<%= row.id %>">See Movie</a>
+                </td>
+                <td>
+                    <a href="/casts/edit/<%= row.id %>">Edit</a> | <a href="/casts/delete/<%= row.id %>">Delete</a>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+</body>
+
+</html>

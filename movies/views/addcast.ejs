@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <%- include ./partials/menu.ejs %>
+    <form action="/casts/add" method="post">
+        <input type="text" name="first_name">
+        <input type="text" name="last_name">
+        <input type="text" name="birth_year">
+        <select name="gender">
+            <% gender.forEach((row) => { %>
+                <option value="<%= row %>"><%= row %></option>
+            <% }) %>
+        </select>
+        <input type="submit" value="add">
+    </form>
+</body>
+</html>
