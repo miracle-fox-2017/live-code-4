@@ -7,8 +7,7 @@ module.exports = router
       const movies = await models.Movie.findAll({
         order: [['released_year', 'DESC']]
       });
-      res.send(movies);
-      // res.render('movies/all-movies', {movies});
+      res.render('movies/all-movies', {movies});
     } catch (err) {
       console.error(err);
     }
