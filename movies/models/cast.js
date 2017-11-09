@@ -18,5 +18,9 @@ module.exports = (sequelize, DataTypes) => {
     Cast.hasMany(models.MovieCast);
   }
 
+  Cast.prototype.getFullname = function () {
+    return this.first_name + " " + this.last_name;
+  }
+
   return Cast;
 };

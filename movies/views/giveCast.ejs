@@ -13,7 +13,7 @@
 		<input type="hidden" name="MovieId" />
 		<select name="CastId" id="CastId">
 			<% casts.forEach( function(cast, index) { %>
-				<option value="<%= cast.id %>"><%= cast.first_name + ' ' +cast.last_name %></option>
+				<option value="<%= cast.id %>"><%= cast.getFullname() %></option>
 			<%  }); %>
 
 		</select>
