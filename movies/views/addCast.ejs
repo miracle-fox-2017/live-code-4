@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Add Cast</title>
+</head>
+<body>
+	<form action="/casts/add" method="POST">
+		<input type="hidden" name="id" value=""/>
+		<input type="text" name="first_name" placeholder="first_name" value="" />
+		<input type="text" name="last_name" placeholder="last_name" value="" />
+		<input type="text" name="birth_year" placeholder="birth_year" value="" />
+		<select name="gender" id="gender">
+			<option value="male">male</option>
+			<option value="female">female</option>
+		</select>
+
+		<input type="submit" value="Tambah"/>
+	</form>
+</body>
+</html>

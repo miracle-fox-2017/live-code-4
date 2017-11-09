@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>All Cast</title>
+</head>
+<body>
+	<a href="/casts/add">Add Cast</a>
+	<table border="1">
+		<tr>
+			<td>Full Name</td>
+			<td>Birthyear</td>
+			<td>Gender</td>
+			<td>Action</td>
+		</tr>
+
+		<% casts.forEach( function(cast, index) { %>
+			<tr>
+				<td><%= cast.first_name %> <%= cast.last_name %></td>
+				<td><%= cast.birth_year %></td>
+				<td><%= cast.gender %></td>
+				<td>
+					<a href="/casts/edit/<%= cast.id %>">Edit Cast</a>
+					<a href="/casts/delete/<%= cast.id %>">Delete Cast</a>
+				</td>
+			</tr>
+		<%  });  %>
+	</table>
+</body>
+</html>
