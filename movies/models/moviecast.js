@@ -3,7 +3,15 @@ module.exports = (sequelize, DataTypes) => {
   var MovieCast = sequelize.define('MovieCast', {
     MovieId: DataTypes.INTEGER,
     CastId: DataTypes.INTEGER,
-    role: DataTypes.STRING,
+    role: {
+      type: DataTypes.STRING,
+      validate: {
+        notNull: {
+          args: true,
+          msg: 'Tidak Boleh Null'
+        }
+      }
+    },
     id: {
       autoIncrement: true,
       primaryKey: true,
