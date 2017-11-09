@@ -26,9 +26,17 @@ class Cart {
         return (this.belanjaan)
     }
     checkout() {
-        console.log("Detail Belanja")
-        console.log("1." + this.belanjaan[0].namabarang + "-" + this.belanjaan[0].jumlahBarang + "pcs - @ " + this.belanjaan[0].hargabarang + "-total : " + this.belanjaan[0].hargabarang * this.belanjaan[0].jumlahBarang)
-        console.log("2." + this.belanjaan[1].namabarang + "-" + this.belanjaan[1].jumlahBarang + "pcs - @ " + this.belanjaan[1].hargabarang + "-total : " + this.belanjaan[1].hargabarang * this.belanjaan[1].jumlahBarang)
+
+        for (let i = 0; i < this.belanjaan.length; i++) {
+            // console.log("Detail Belanja")
+            console.log(this.belanjaan[i].namabarang + "-" + this.belanjaan[i].jumlahBarang + "pcs - @ " + this.belanjaan[i].hargabarang + "-total : " + this.belanjaan[i].hargabarang * this.belanjaan[i].jumlahBarang)
+            this.total += this.belanjaan[i].jumlahBarang * this.belanjaan[i].hargabarang
+
+        }
+        return console.log(this.total)
+        // console.log("Detail Belanja")
+        // console.log("1." + this.belanjaan[0].namabarang + "-" + this.belanjaan[0].jumlahBarang + "pcs - @ " + this.belanjaan[0].hargabarang + "-total : " + this.belanjaan[0].hargabarang * this.belanjaan[0].jumlahBarang)
+        // console.log("2." + this.belanjaan[1].namabarang + "-" + this.belanjaan[1].jumlahBarang + "pcs - @ " + this.belanjaan[1].hargabarang + "-total : " + this.belanjaan[1].hargabarang * this.belanjaan[1].jumlahBarang)
     }
 
 }
