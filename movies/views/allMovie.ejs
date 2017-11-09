@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>All Movie</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>Movie</td>
+			<td>Released Year</td>
+			<td>Genre</td>
+			<td>Action</td>
+		</tr>
+
+		<% movies.forEach( function(movie, index) { %>
+			<tr>
+				<td><%= movie.name %></td>
+				<td><%= movie.released_year %></td>
+				<td><%= movie.genre %></td>
+				<td>
+					<a href="/movies/<%= movie.id %>/addCast">Add Cast</a>
+				</td>
+			</tr>
+		<%  });  %>
+	</table>
+</body>
+</html>
