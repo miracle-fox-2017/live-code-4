@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MOVIES</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Released Year</th>
+        <th>Genre</th>
+      </tr>
+      <%for(let i=0;i<dataMovies.length;i++){%>
+        <tr>
+          <td><%=dataCast[i].name%></td>
+          <td><%=dataCast[i].birthday_year%></td>
+          <td><%=dataMovies[i].gender%></td>
+        </tr>
+    <%}%>
+    </table>
+
+  </body>
+</html>
