@@ -24,10 +24,6 @@ class Angkot {
   }
 
   jalan() {
-    for (let i = 0 ; i < this.penumpang.length; i++) {
-      this.jarakTempuh[i] = 0;
-    }
-
     for (let j = 0 ; j < this.penumpang.length; j++) {
       this.jarakTempuh[j] = this.penumpang[j].tambahJarak();
     }
@@ -38,6 +34,8 @@ class Angkot {
     for (let i = 0 ; i < this.penumpang.length; i++) {
       if (tujuan === this.penumpang[i].tujuan) {
         this.penghasilan.push(this.penumpang[i].bayar())
+
+        console.log(`tagih bayaran ${this.penumpang[i].bayar()}`)
         console.log(`Penumpang turun di ${tujuan}`)
       }
     }
