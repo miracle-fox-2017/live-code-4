@@ -16,6 +16,10 @@ module.exports = {
       },
       role: {
         type: Sequelize.STRING
+        validate: {
+          notNull : true,
+          args : 'role tidak boleh kosong'
+        }
       },
       createdAt: {
         allowNull: false,

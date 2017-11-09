@@ -24,8 +24,10 @@
         <td><%= item.getFullName()%></td>
         <td><%= item.birth_year%></td>
         <td><%= item.gender%></td>
+        <td><a href="/casts/seemovies/<%=item.id%>">see movies</a></td>
         <td><a href="/casts/edit/<%=item.id%>">Edit</a></td>
         <td><a href="/casts/delete/<%=item.id%>">Delete</a></td>
+
 
     </tbody>
     <%})%>

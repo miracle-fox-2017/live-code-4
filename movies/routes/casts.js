@@ -6,7 +6,6 @@ const Model = require('../models')
 
 router.get('/', (req, res) => {
   Model.Cast.findAll().then(dataCasts => {
-      //res.send(dataCast)
       res.render('casts/casts', {dataCasts:dataCasts})
   })
 })
@@ -73,6 +72,17 @@ router.get('/delete/:id', (req, res) => {
 })
 
 
+
+
+router.get('/seemovies/:id', (req,res) => {
+  Model.Cast.findOne({
+    include:[
+      {Model:Model.Movie}
+    ]
+  },{where:{id:req.params.id}}).then(dataCast =>{
+    res.send(dataCast)
+  })
+})
 
 
 
