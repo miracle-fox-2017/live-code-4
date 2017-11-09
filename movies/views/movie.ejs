@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HALAMAN MOVIE</title>
+
+    <style type = "text/css">
+
+      .font {
+        font-family : sans-serif;
+      }
+      .tengah {
+        text-align :center;
+      }
+
+    </style>
+
+  </head>
+  <body style="background-color : #FF2020">
+    <table border = "1" width = "55%">
+      <thead class = "font tengah">
+        <th>Id</th>
+        <th>Movie</th>
+        <th>Released Year</th>
+        <th>Genre</th>
+        <th>Add Cast</th>
+      </thead>
+
+      <tbody class = "font tengah">
+        <% for(let i = 0 ; i < rowMovie.length ; i++) { %>
+        <tr>
+          <td><%= rowMovie[i].id %></td>
+          <td><%= rowMovie[i].name %></td>
+          <td><%= rowMovie[i].released_year %></td>
+          <td><%= rowMovie[i].genre %></td>
+          <td><a href="/casts/add/<%= rowMovie[i].id %>"><button style = "margin-top : 1%">ADD CAST</button></a></td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+
+
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HALAMAN ADD CAST</title>
+    <style type = "text/css">
+
+      .font {
+        font-family : sans-serif;
+      }
+      .tengah {
+        text-align :center;
+      }
+
+    </style>
+  </head>
+  <body style="background-color : #FF2020">
+    <fieldset>
+      <legend class = "font">ADD CAST</legend>
+        <form action="/casts/add" method="post">
+          <table border = "0" class = "font">
+            <tr>
+              <td>First Name</td>
+              <td>:</td>
+              <td><input type="text" name="first_name" placeholder ="Your First Name Here"></td>
+            </tr>
+
+            <tr>
+              <td>Last Name</td>
+              <td>:</td>
+              <td><input type="text" name="last_name" placeholder ="Your Last Name Here"></td>
+            </tr>
+
+            <tr>
+              <td>Birth Year</td>
+              <td>:</td>
+              <td><input type="text" name="birth_year" placeholder ="Your Birth Year Here"></td>
+            </tr>
+
+            <tr>
+              <td>Gender</td>
+              <td>:</td>
+              <td>
+                <select name="gender">
+                  <option selected>SELECT</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td><input type="submit" value= "Add Cast"></td>
+            </tr>
+
+        </form>
+    </fieldset>
+  </body>
+</html>
