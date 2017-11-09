@@ -1,0 +1,35 @@
+<%- include('assets/partials/header',{my_title:'movies',folder:''})%>
+
+  <div class="container">
+    <table class="table is-bordered is-striped is-narrow is-fullwidth">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>RELEASED YEAR</th>
+      <th>GENRE</th>
+      <th>ADD CAST</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% for(let i=0; i< data_Movie.length; i++){ %>
+    <tr>
+      <td><%=data_Movie[i].id%></td>
+      <td><%=data_Movie[i].name%></td>
+      <td><%=data_Movie[i].released_year%></td>
+      <td><%=data_Movie[i].genre%></td>
+      <td>
+        <a class="button is-info is-outlined is-small" href="/movie/<%=data_Movie[i].id%>/addcast">
+        <span class="icon is-small">
+          <i class="fa fa-pencil"></i>
+        </span>
+        <span>Add Cast</span>
+        </a>
+      </td>
+    </tr>
+    <%}%>
+  </tbody>
+</table>
+  </div>
+
+<%- include assets/partials/footer %>

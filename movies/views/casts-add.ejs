@@ -1,0 +1,43 @@
+<%- include('assets/partials/header',{my_title:'cast -add',folder:'../'})%>
+
+  <div class="container">
+    <form action="/casts/add" method="post">
+      <div class="field">
+        <label class="label">First Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" name="first_name" value="">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Last Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" name="last_name" value="">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Birth Year</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Text input" name="birth_year" value="">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Gender</label>
+        <div class="control">
+          <div class="select is-fullwidth">
+            <select name="gender">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top:33px;" class="control">
+          <!-- <button type="submit" value="Submit" class="button is-primary">Submit</button> -->
+          <input class="button is-success is-outlined is-medium" type="submit" value="Submit input">
+          <input class="button is-success is-outlined is-medium" type="reset" value="Reset input">
+        </div>
+    </form>
+  </div>
+
+<%- include assets/partials/footer %>
