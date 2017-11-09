@@ -62,6 +62,6 @@ angkot.jalan();
 angkot.jalan();
 // // ujung
 angkot.turun('ujung');
-// angkot.selesai(); // total penghasilan: 1650
+angkot.selesai(); // total penghasilan: 1650
 // driver code #tidak boleh diubah#
 
