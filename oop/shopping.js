@@ -27,7 +27,7 @@ class Cart {
 		this.item.splice(index,1);
 	}	
 	checkout(){
-		return this.item;
+		console.log (this.item)
 	}
 }
 
