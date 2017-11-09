@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cast Page</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Fullname</td>
+            <td>Birth Year</td>
+            <td>Gender</td>
+            <td>Action</td>
+        </tr>
+        <%castRows.map((value)=>{%>
+            <tr>
+                <td><%=value.birth_year%></td>
+                <td><%=value.birth_year%></td>
+                <td><%=value.gender%></td>
+                <td>
+                    <a href="/casts/castmovie/<%=value.id%>">See Movies</a>
+                    <a href="/casts/edit/<%=value.id%>">Edit</a>
+                    <a href="/casts/delete/<%=value.id%>">Hapus</a>
+                </td>
+            </tr>
+        <%})%>
+    </table>
+    <h1>Tambah Cast</h1>
+    <form action="/casts/add" method="post">
+        <table border="1">
+            <tr>
+                <td>Nama Depan</td>
+                <td><input type="text" name="first_name"></td>
+            </tr>
+            <tr>
+                <td>Nama Belakang</td>
+                <td><input type="text" name="last_name"></td>
+            </tr>
+            <tr>
+                <td>Tahun Lahir</td>
+                <td><input type="number" name="birth_year"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Add">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

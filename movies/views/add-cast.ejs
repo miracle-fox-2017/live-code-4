@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add Cast</title>
+</head>
+<body>
+    <form action="index.html" method="post">
+        <input type="hidden" name="movie" value="<%=movie.id%>">
+        <table border="1">
+            <tr>
+                <td>Movie</td>
+                <td><%=movie.name%></td>
+            </tr>
+            <tr>
+                <td>Select Cast</td>
+                <td>
+                    <select name="cast">
+                        <option value="">Pilih Pemeran</option>
+                        <%casts.map((value)=>{%>
+                            <option value="<%=value.id%>">
+                                <%=value.first_name+' '+value.last_name%>
+                            </option>
+                        <%})%>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Role</td>
+                <td><input type="text" name="role"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Save">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
