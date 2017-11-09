@@ -19,7 +19,7 @@
 			<tr>
 				<td><%= movie.Movie.name %></td>
 				<td><%= movie.Movie.released_year %></td>
-				<td><%= +movie.Movie.released_year - +movieCast.birth_year %></td>
+				<td><%= Helper.getCastAge(+movie.Movie.released_year, +movieCast.birth_year) %></td>
 				<td><%= movie.role %></td>
 			</tr>
 		<%  });  %>

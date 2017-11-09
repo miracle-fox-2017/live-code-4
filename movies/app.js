@@ -6,6 +6,8 @@ app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+app.locals.Helper = require('./helpers/helper');
+
 // Route
 const indexRoute = require('./routers/indexRoute');
 app.use('/', indexRoute);
