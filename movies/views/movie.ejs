@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Movie</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>name</th>
+				<th>released_year</th>
+				<th>genre</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% allMovie.forEach(movie => {%>
+			<tr>
+				<td> <%= movie.name %> </td>
+				<td> <%= movie.released_year %> </td>
+				<td> <%= movie.genre	 %> </td>
+				<td> <a href= "/movie/addcast/<%= movie.id %>"> add cast </a></td>
+			</tr>	
+		<%})%>
+		</tbody>
+	</table>
+</body>
+</html>

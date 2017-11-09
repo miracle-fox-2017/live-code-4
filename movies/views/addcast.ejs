@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADD</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>first_name</th>
+				<th>last_name</th>
+				<th>birth_year</th>
+				<th>gender</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<form action="/casts/add/" method="POST">
+				<td> <input type="text" name="first_name"> </td>
+				<td> <input type="text" name="last_name"> </td>
+				<td> <input type="text" name="birth_year"> </td>
+				<td><select name="gender">
+					<option value="female"> female </option>
+					<option value="male"> male </option>
+				</select></td>
+					<td> <input type="submit" value="ADD"></td>
+				</form>
+			</tr>	
+		</tbody>
+	</table>
+
+</body>
+</html>
