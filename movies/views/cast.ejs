@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CAST</title>
+    <a href="/movies">MOVIES</a>
+    <a href="/cast">CAST</a>
+  </head>
+  <body>
+    <br>
+    INI CAST
+    <br>
+    <br>
+    <a href="/cast/add">ADD CAST</a>
+    <table class="table" id="cast">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>FULL NAME</th>
+          <th>BIRTH YEAR</th>
+          <th>GENDER</th>
+          <th colspan="2">OPTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%dataContacts.forEach (row=> {%>
+          <tr>
+            <td><%= row.id %></td>
+            <td><%= row.fullName %></td>
+            <td><%= row.birth_year %></td>
+            <td><%= row.gender %></td>
+            <td><a href="/cast/<%=row.id%>/movie">SEE MOVIE</a></td>
+            <td>
+              <a href="/cast/edit/<%= row.id %>">EDIT</a>
+              <a href="/cast/delete/<%= row.id %>">DELETE</a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+
+  </body>
+</html>

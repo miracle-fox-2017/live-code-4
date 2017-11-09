@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MOVIES</title>
+    <a href="/movies">MOVIES</a>
+    <a href="/cast">CAST</a>
+  </head>
+  <body>
+    <br>
+    INI MOVIES
+    <br>
+    <table class="table" id="movie">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>RELEASED YEAR</th>
+          <th>GENRE</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%dataContacts.forEach (row=> {%>
+          <tr>
+            <td><%= row.id %></td>
+            <td class='name'><%= row.name %></td>
+            <td><%= row.released_year %></td>
+            <td><%= row.genre %></td>
+            <td><a href="/movies/<%=row.id%>/addCast">ADD CAST</a></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+
+  </body>
+</html>
