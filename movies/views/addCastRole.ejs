@@ -1,0 +1,32 @@
+<%- include('./partials/head')%>
+
+  <form action="/movies/<%=movieId%>/addCastRole" method="post">
+    <table>
+      <input type="hidden" name = "movieId" value="<%=movieId%>">
+      <tr>
+        <td>Cast</td>
+        <td>:</td>
+        <td>
+        <select name="cast">
+          <%casts.forEach(cast => { %>
+              <option value="<%=cast.id%>"><%=cast.getFullName()%></option>
+          <%})%>
+        </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Role</td>
+        <td>:</td>
+        <td><input type="text" name="role"></td>
+      </tr>
+      <tr>
+        <td><input type="submit" value="add"></td>
+      </tr>
+    </table>
+  </form>
+  
+  <%if (msg) { %>
+    <%=msg%>
+  <%}%>
+
+<%- include('./partials/foot')%>

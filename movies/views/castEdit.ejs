@@ -1,0 +1,25 @@
+<form action="/casts/edit/<%cast.id%>" method="post">
+  <tr>
+    <th>first name</th>
+    <th>last name</th>
+    <th>birth</th>
+    <th>gender name</th>
+  </tr>
+  
+  <tr>
+    <td><input type="text" name="first_name" value="<%=cast.first_name%>"></td>
+    <td><input type="text" name="last_name" value="<%=cast.last_name%>"></td>
+    <td><input type="text" name="birth_year" value="<%=cast.birth_year%>"></td>
+    <td>
+      <select name="gender">
+        <%if (cast.gender === "M") { %>
+            <option value="M" selected>Male</option>
+            <option value="F">Female</option>
+        <%} else { %>
+          <option value="M">Male</option>
+          <option value="F" selected>Female</option>
+        <%}%>
+      </select>
+    </td>
+  </tr>
+</form>
