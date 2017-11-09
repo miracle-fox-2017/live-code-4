@@ -49,20 +49,6 @@ router.post('/edit/:id', (req, res) => {
 })
 
 router.get('/:id/listMovies/', (req, res) => {
-	// Models.Cast.findById(req.params.id,
-	// 	{
-	// 	include: [{
-	// 		model: Models.MovieCast,
-	// 		include: [{
-	// 			model: Models.Movie
-	// 		}]
-	// 	}]
-	// }).then(foundCast => {
-	// 	// res.send("foundCast");
-	// 	// res.render('editCast', {cast: foundCast});
-
-	// }).catch(err => res.send(err.message));
-
 	Models.Cast.findById(req.params.id, {
 		include: [{
 			model: Models.MovieCast,
