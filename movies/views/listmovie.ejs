@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="/movies">movie</a> <a href="/casts">casts</a>
+    <h1><%= casts.fullName() %></h1>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Released Year</th>
+        <th>Age when movie released</th>
+        <th>Role</th>
+      </tr>
+      <!-- looping disini -->
+      <% casts.Movies.forEach(movie=>{ %>
+        <tr>
+          <td><%= movie.name %></td>
+          <td><%= movie.released_year %></td>
+          <td><%= movie.age %> years old</td>
+          <td><%= movie.CastMovie.role %></td>
+        </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>

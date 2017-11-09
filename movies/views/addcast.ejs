@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Add cast</h1>
+    <%= msg %>
+    <br>
+    <br>Movie name : <%= movie.name %>
+    <br>Movie released_year : <%= movie.released_year %>
+    <br>Movie genre : <%= movie.genre %>
+    <form class="" action="" method="post">
+      Cast: 
+      <select class="" name="CastId">
+        <!-- looping here -->
+        <% casts.forEach(cast=>{  %>
+          <option value="<%= cast.id %>"><%= cast.fullName() %></option>
+        <% }) %>
+      </select>
+      <br>Role: <input type="text" name="role" value="" placeholder="role">
+      <br><input type="submit" name="" value="submit">
+    </form>
+  </body>
+</html>
