@@ -1,0 +1,36 @@
+<%- include ../partials/head%>
+
+<div class="container">
+  <h2>List Cast</h2>     
+  <a href="/casts/add" class="btn btn-primary" role="button">Add</a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Fullname</th>
+        <th>Birth year</th>
+        <th>Gender</th>
+        <th>Actions</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+    <%casts.forEach(cast => {%>
+      <tr>
+        <td><%=cast.id%></td>
+       	<td><%=cast.getFullname()%></td>
+        <td><%=cast.birth_year%></td>
+        <td><%=cast.gender%></td>
+        <td><a href="/casts/see_movies/<%=cast.id%>" class="btn btn-primary" role="button">See Movies</a></td>
+        <td>
+          <a href="/casts/edit/<%=cast.id%>" class="btn btn-primary" role="button">Edit</a> | 
+          <a href="/casts/delete/<%=cast.id%>" class="btn btn-primary" role="button">Delete</a>
+          
+        </td>
+      </tr>
+    <%})%>
+    </tbody>
+  </table>
+</div>
+
+<%- include ../partials/footer%>
