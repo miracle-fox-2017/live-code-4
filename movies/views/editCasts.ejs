@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <form class="editCasts" action="/casts/edit/<%= dataJsonCasts[0].id %>" method="post">
+    <label>Input First Name</label>
+    <br>
+    <input type="text" name="first_name" value="<%= dataJsonCasts[0].first_name %>">
+    <br>
+    <label>Input Last Name</label>
+    <br>
+    <input type="text" name="last_name" value="<%= dataJsonCasts[0].last_name %>">
+    <br>
+    <label>Input Birth Year</label>
+    <br>
+    <input type="text" name="birth_year" value="<%= dataJsonCasts[0].birth_year %>">
+    <br>
+    <label>Input Gender</label>
+    <br>
+    <select class="gender" name="gender">
+      <% if(dataJsonCasts[0].gender === 'male'){ %>
+        <option value="male" selected>Male</option>
+        <option value="female">Female</option>
+      <% } else { %>
+        <option value="male">Male</option>
+        <option value="female" selected>Female</option>
+      <% } %>
+    </select>
+    <br>
+    <input type="submit" name="submit" value="submit">
+  </form>
+</body>
+</html>

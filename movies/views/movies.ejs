@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>movies page</h1>
+  <table>
+    <tr>
+      <th>ID movies</th>
+      <th>Movie Name</th>
+      <th>Movie Released Year</th>
+      <th>Movie Genre</th>
+    </tr>
+    <% for(let i = 0; i < dataJsonMovies.length; i++){ %>
+      <tr>
+        <td><%= dataJsonMovies[i].id %></td>
+        <td><%= dataJsonMovies[i].name %></td>
+        <td><%= dataJsonMovies[i].released_year %></td>
+        <td><%= dataJsonMovies[i].genre %></td>
+        <td><a href="/movies/addCasts/<%= dataJsonMovies[i].id %>">Add Casts</a></td>
+      </tr>
+    <% } %>
+  </table>
+</body>
+</html>
