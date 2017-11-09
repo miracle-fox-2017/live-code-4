@@ -1,0 +1,27 @@
+<%- include ../partials/head%>
+
+<div class="container">
+  <h2>List Movie</h2>      
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Released Year</th>
+        <th>Genre</th>
+        <th>Options</th>
+      </tr>
+    </thead>
+    <tbody>
+    <%movies.forEach(movie => {%>
+      <tr>
+        <td><%=movie.id%></td>
+       	<td><%=movie.name%></td>
+        <td><%=movie.released_year%></td>
+        <td><%=movie.genre%></td>
+        <td><a href="/movies/add_cast/<%=movie.id%>" class="btn btn-primary" role="button">Add Cast</a></td>
+      </tr>
+    <%})%>
+    </tbody>
+  </table>
+</div>

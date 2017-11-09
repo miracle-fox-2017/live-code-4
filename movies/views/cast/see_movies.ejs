@@ -1,0 +1,28 @@
+<%- include ../partials/head%>
+
+<div class="container">
+  <h2>List Cast</h2>     
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nama Movie</th>
+        <th>Released Year</th>
+        <th>Birth year</th>
+        <th>Umur Cast</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+    <%cast.forEach(cast =>{%>
+      <%cast.Movies.forEach( movie =>{%>
+      <tr>
+        <td><%=movie.name%></td>
+       	<td><%=movie.released_year%></td>
+      </tr>
+      <%})%>
+    <%})%>
+    </tbody>
+  </table>
+</div>
+
+<%- include ../partials/footer%>

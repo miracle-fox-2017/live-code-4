@@ -1,0 +1,28 @@
+<%- include ../partials/head%>
+
+<h3>Edit Cast</h3>
+<form style="width: 300px" action="/casts/edit/<%=cast.id%>" method="POST">
+	<div class="form-group" >
+	    <label >Firstname:</label>
+	    <input type="text" class="form-control" name="first_name" value="<%=cast.first_name%>">
+	</div>
+	<div class="form-group" >
+	    <label >Lastname:</label>
+	    <input type="text" class="form-control" name="last_name" value="<%=cast.last_name%>">
+	</div>
+	<div class="form-group" >
+	    <label >BirthYear:</label>
+	    <input type="text" class="form-control" name="birth_year" value="<%=cast.birth_year%>">
+	</div>
+	<div class="form-group">
+	  <label for="sel1">Select gender:</label>
+	  <select class="form-control" id="sel1" name="gender">
+	  	<option><%=cast.gender%></option>
+	    <option><%=cast.gender == 'male' ? 'female' : cast.gender%></option>
+	  </select>
+	</div>
+	
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<%- include ../partials/footer%>
