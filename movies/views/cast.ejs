@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cast</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>first name</th>
+        <th>last name</th>
+        <th>birth year</th>
+        <th>gender</th>
+        <th>acton</th>
+      </tr>
+      <%castsRows.forEach((cast)=>{%>
+        <tr>
+          <td> <%= cast.first_name %> </td>
+          <td> <%= cast.last_name %> </td>
+          <td> <%= cast.birth_year%> </td>
+          <td> <%= cast.gender%> </td>
+          <td> <a href='/casts/<%=cast.id%>/delete'>delete</a><br><a href='/casts/<%=cast.id%>/edit'>edit</a> </td>
+        </tr>
+      <%})%>
+    </table>
+    <a href='/casts/add'> add casts </a>
+
+  </body>
+</html>
