@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CastMovie</title>
+</head>
+<body>
+<table>
+	<thead>
+		<td>Movie Name</td>
+		<td>Release Year</td>
+		<td>Age when released</td>
+		<td>Role</td>
+	</thead>
+	<tbody>
+		<%castMovie.Movies.forEach(cast =>{%>
+			<tr>
+				<td><%=cast.name%></td>
+				<td><%=cast.released_year%></td>
+				<td><%=cast.age%></td>
+				<td><%=cast.MovieCast.role%></td>
+			</tr>
+		<%})%>
+	</tbody>
+</table>
+
+</body>
+</html>

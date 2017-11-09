@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Cast</title>
+</head>
+<body>
+<h3>Edit Cast</h3>
+<form action="/casts/edit/<%=cast.id%>" method="post">
+  First name:<br>
+  <input type="text" name="first_name" value="<%=cast.first_name%>">
+  <br>
+  Last name:<br>
+  <input type="text" name="last_name" value="<%=cast.last_name%>">
+  <br>
+  Birth Year:<br>
+  <input type="text" name="birth_year" value="<%=cast.birth_year%>">
+  <br>
+  Gender :<br>
+  <select name="gender">
+  <%gender.forEach(jkelamin=>{%>
+  	<%if(jkelamin === cast.gender){%>
+  		<option value="<%=jkelamin%>" selected><%=jkelamin%></option>	
+  	<%}else{%>
+  		<option value="<%=jkelamin%>"><%=jkelamin%></option>
+  	<%}%>
+  <%})%>
+  </select> 
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
