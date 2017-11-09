@@ -34,11 +34,13 @@ class Cart {
   }
   checkout(){
     this.item.forEach(data=>{
-      let total = data.jumlah * data.harga
-      console.log(`${data.nama} '-' @ ${data.harga} "-" total ${total}`);
-      console.log(` TOTAL BELANJA `);
+      let total1 = data.jumlah * data.harga
+      this.total +=total1
+      console.log(`${data.nama} '-' @ ${data.harga} "-" total ${total1}`);
+
       // console.log(data.jumlah);
     })
+    console.log(` TOTAL BELANJA : ${this.total} `);
   }
 }
 
