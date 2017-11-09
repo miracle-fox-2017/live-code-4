@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movies</title>
+</head>
+<body>
+    <%- include ./partials/menu.ejs %>
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td>Release Year</td>
+            <td>Genre</td>
+            <td>Action</td>
+        </tr>
+        <% dataMovies.forEach((row) => { %>
+        <tr>
+            <td><%= row.name %></td>
+            <td><%= row.released_year %></td>
+            <td><%= row.genre %></td>
+            <td><a href="/movies/add/<%= row.id %>">add cast</a></td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>
