@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <title>
+        Data Movie
+    </title>
+</head>
+
+<body>
+    <header>
+        <a href="/">Home</a>
+        <a href="/casts">Cast</a>
+        <a href="/movies">Movie</a>
+    </header>
+    <%= dataCasts.getFullName()%>
+        <table>
+            <tr>
+                <th>Movie</th>
+                <th>Released Year</th>
+                <th>Age when Movie Released</th>
+                <th>Role</th>
+            </tr>
+
+            <% dataCasts.Movies.forEach((movie)=>{%>
+                <tr>
+                    <td>
+                        <%= movie.name%>
+                    </td>
+
+                    <td>
+                        <%= movie.released_year%>
+                    </td>
+                    <td>
+                        <%= (movie.released_year - dataCasts.birth_year)%> years old
+
+                    </td>
+                    <td>
+                        <%= movie.MovieCast.role%>
+                    </td>
+
+                </tr>
+                <%})%>
+
+        </table>
+</body>
+
+</html>

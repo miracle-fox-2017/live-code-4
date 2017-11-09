@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>
+        Data Movie
+    </title>
+</head>
+
+<body>
+    <header>
+        <a href="/">Home</a>
+        <a href="/casts">Cast</a>
+        <a href="/movies">Movie</a>
+    </header>
+    <%= dataMovie.name%>
+        <form action="/movies/<%= dataMovie.id%>/addCast" method="POST">
+            <select name="CastId">
+        <% dataCasts.forEach((cast)=>{ %>
+            <option value="<%= cast.id%>">
+                <%= cast.getFullName()%>
+            </option>
+        <%})%>
+          
+       </select>
+            <input type="text" name="role" placeholder="e:g Pemeran Utama" />
+            <input type="submit" value="Add" />
+        </form>
+</body>
+
+</html>
