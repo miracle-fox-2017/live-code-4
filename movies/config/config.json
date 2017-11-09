@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "agungpangestu",
+    "password": null,
+    "database": "live-code",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
