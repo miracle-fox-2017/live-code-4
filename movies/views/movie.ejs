@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Movies</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Judul</td>
+            <td>Tahun Rilis</td>
+            <td>Genre</td>
+            <td>Action</td>
+        </tr>
+        <%movies.map((value)=>{%>
+            <tr>
+                <td><%=value.name%></td>
+                <td><%=value.released_year%></td>
+                <td><%=value.genre%></td>
+                <td>
+                    <a href="/movie/addcast/<%=value.id%>">Add Cast</a>
+                </td>
+            </tr>
+        <%})%>
+    </table>
+</body>
+</html>

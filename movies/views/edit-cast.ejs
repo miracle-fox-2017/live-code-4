@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Edit Cast</title>
+</head>
+<body>
+    <form action="/casts/edit/<%=data.id%>" method="post">
+        <input type="hidden" name="id" value="<%=data.id%>">
+        <table border="1">
+            <tr>
+                <td>Nama Depan</td>
+                <td><input type="text" name="first_name" value="<%=data.first_name%>"></td>
+            </tr>
+            <tr>
+                <td>Nama Belakang</td>
+                <td><input type="text" name="last_name" value="<%=data.last_name%>"></td>
+            </tr>
+            <tr>
+                <td>Tahun Lahir</td>
+                <td><input type="number" name="birth_year" value="<%=data.birth_year%>"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <select name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="Save">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
