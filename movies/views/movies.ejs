@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>movies</title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>id</td>
+        <td>released year</td>
+        <td>name</td>
+        <td>genre</td>
+      </tr>
+       <% rows.(forEach(row) { %>
+         <tr>
+        <td><%= row.id %></td>
+        <td><%= row.released_year %></td>
+        <td><%= row.genre %></td>
+        <td><%= row.genre %></td>
+          <%})%>
+      </tr>
+    </table>
+
+  </body>
+</html>
