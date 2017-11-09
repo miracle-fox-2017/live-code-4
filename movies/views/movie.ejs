@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>released_year</th>
+        <th>genre</th>
+      </tr>
+      <%for(var i = 0; i < movie.length; i++){%>
+        <tr>
+          <td><%=movie[i].name%></td>
+          <td><%=movie[i].release_year%></td>
+          <td><%=movie[i].genre%></td>
+          <td><a href="movie/addcast/<%=movie[i].id%>">addcast</a></td>
+        </tr>
+      <%}%>
+    </table>
+  </body>
+</html>

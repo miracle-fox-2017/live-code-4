@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>movie</td>
+        <td>release year</td>
+        <td>role</td>
+      </tr>
+      <%for(var i = 0; i < hasil.length; i++){%>
+      <tr>
+        <td><%=hasil[i].Movie.name%></td>
+        <td><%=hasil[i].Movie.release_year%></td>
+        <td><%=hasil[i].role%></td>
+      </tr>
+      <%}%>
+    </table>
+  </body>
+</html>
