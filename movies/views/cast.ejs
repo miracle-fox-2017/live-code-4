@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <table border>
+      <tr>
+        <th>full name</th>
+        <th>birth_year</th>
+        <th>gender</th>
+      </tr>
+      <%for(let i = 0 ;i< rows.length;i++){%>
+          <tr>
+            <td><%=rows[i].getFullname()%></td>
+            <td><%=rows[i].birth_year%></td>
+            <td><%=rows[i].gender%></td>
+            <td><a href="/cast/edit/<%=rows[i].id%>">edit</a></td>
+            <td><a href="/delete/<%=rows[i].id%>">delete</a></td>
+          </tr>
+        <%}%>
+    </table>
+  </body>
+</html>
