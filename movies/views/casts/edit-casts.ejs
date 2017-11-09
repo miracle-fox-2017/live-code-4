@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit Cast</title>
+  </head>
+  <body>
+    <form method="post">
+      <p>First name: <input type="text" name="firstname" value="<%= cast.first_name %>" required></p>
+      <p>Last name: <input type="text" name="lastname" value="<%= cast.last_name %>" required></p>
+      <p>Birth year: <input type="number" name="birthyear" value="<%= cast.birth_year %>" required></p>
+      <select name="gender">
+        <option value="male"
+          <% if (cast.gender === 'male') { %>
+            selected
+          <% } %>
+        >Male</option>
+        <option value="female"
+          <% if (cast.gender === 'female') { %>
+            selected
+          <% } %>
+        >Female</option>
+      </select>
+      <button>EDIT CASTS</button>
+    </form>
+  </body>
+</html>

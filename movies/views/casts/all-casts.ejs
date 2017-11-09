@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Casts</title>
+  </head>
+  <body>
+    <a href="/casts/add">Add Casts</a>
+    <table style="width: 100%">
+      <thead>
+        <tr>
+          <th>Fullname</th>
+          <th>Birth Year</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody align="center">
+        <% casts.forEach((cast, index) => { %>
+          <tr>
+            <td><%= casts[index].fullname() %></td>
+            <td><%= cast.birth_year %></td>
+            <td><%= cast.gender %></td>
+            <td>
+              <a href="/casts/edit/<%= cast.id %>">Edit</a>
+              <a href="/casts/delete/<%= cast.id %>">Delete</a>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
