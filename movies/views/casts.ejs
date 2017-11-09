@@ -1,0 +1,28 @@
+<%- include('./partials/head')%>
+
+<table>
+  <tr>
+    <td colspan="5" align="right"><a href="/casts/add">Add Cast</a></td>
+  </tr>
+  <tr>
+    <th>Name</th>
+    <th>Birth Year</th>
+    <th>Gender</th>
+    <th colspan="2">Action</th>
+  </tr>
+  
+  <%casts.forEach(cast => { %>
+    
+    <tr>
+      <td><%=cast.getFullName()%></td>
+      <td><%=cast.birth_year%></td>
+      <td><%=cast.gender%></td>
+      <td><a href="/casts/edit/<%=cast.id%>">Edit</a></td>
+      <td><a href="/casts/delete/<%=cast.id%>">Delete</a></td>
+      <td><a href="/casts/<%=cast.id%>/listMovies">See Casts</a></td>
+    </tr>
+    
+  <%})%>
+</table>
+
+<%- include('./partials/foot')%>
