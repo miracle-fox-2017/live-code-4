@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>All Movies</title>
+  </head>
+  <body>
+    <table style="width: 100%">
+      <thead>
+        <tr>
+          <th>Movie Name</th>
+          <th>Released Year</th>
+          <th>Genre</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody align="center">
+        <% movies.forEach(movie => { %>
+          <tr>
+            <td><%= movie.name %></td>
+            <td><%= movie.released_year %></td>
+            <td><%= movie.genre %></td>
+            <td>
+              <a href="/movies/addcasts/<%= movie.id %>">add casts</a>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
