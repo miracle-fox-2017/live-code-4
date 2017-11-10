@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movies</title>
+  </head>
+  <body>
+    <h2>Movies</h2>
+    <table border="1">
+      <tr>
+        <th>Name</th>
+        <th>Released Year</th>
+        <th>Genre</th>
+      </tr>
+      <% for(let i = 0; i < dataMovie.length; i++){ %>
+        <tr>
+          <td><%= dataMovie[i].name %></td>
+          <td><%= dataMovie[i].released_year %></td>
+          <td><%= dataMovie[i].genre %></td>
+        </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
