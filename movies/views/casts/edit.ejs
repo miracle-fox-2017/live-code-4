@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Cast</title>
+  </head>
+  <body>
+    <form class="" action="/casts/edit/<%= cast.id %>" method="post">
+      <label for="">First Name</label>
+      <input type="text" name="first_name" value="<%= cast.first_name %>"><br>
+      <label for="">Last Name</label>
+      <input type="text" name="last_name" value="<%= cast.last_name %>"><br>
+      <label for="">Birth Year</label>
+      <input type="text" name="birth_year" value="<%= cast.birth_year %>"><br>
+      <label for="">Gender</label>
+      <select class="" name="gender">
+        <option value="Pria" <%= cast.gender == "Pria" ? "selected" : "" %>>Pria</option>
+        <option value="Wanita" <%= cast.gender == "Wanita" ? "selected" : "" %>>Wanita</option>
+      </select><br>
+      <input type="submit" name="" value="Submit">
+    </form>
+  </body>
+</html>
