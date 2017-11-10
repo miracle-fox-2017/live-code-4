@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Add Cast</title>
+    </head>
+    <body>
+        <form class="" action="/cast/add" method="post">
+            <select name="gender">
+                <option>---SELECT---</option>
+                <option value="<%= rowsCast.gender %>"> Male</option>
+                <option value="<%= rowsCast.gender %>"> Female</option>
+                <input type="submit" value="submit">
+            </select>
+        </form>
+    </body>
+</html>

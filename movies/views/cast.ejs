@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Cast</title>
+    </head>
+    <body>
+
+        <table border="1">
+            <tr>
+                <td>Name</td>
+                <td>Birth year</td>
+                <td>Gender</td>
+            </tr>
+                <% rowsCast.forEach((list) => { %>
+                    <tr>
+                        <td> <%=list.getFullname() %> </td>
+                        <td> <%=list.birth_year %> </td>
+                        <td> <%= list.gender %></td>
+                    </tr>
+                <% }) %>
+        </table>
+    </body>
+</html>
