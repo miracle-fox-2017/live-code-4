@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Cast to Movie</title>
+</head>
+<body>
+<h3>Add Movie <%=movie.name%> Cast</h3>
+<h3><%=err%></h3>
+<form action="/movie/addCast/<%=movie.id%>" method="post">
+  Casts :<br>
+  <select name="cast">
+  <%casts.forEach(cast =>{%>
+  	<option value="<%=cast.id%>"><%=cast.getFullName()%></option>
+  <%})%>
+  </select>
+  <br>
+  Role :<br>
+  <input type="text" name="role" placeholder="Role">
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>

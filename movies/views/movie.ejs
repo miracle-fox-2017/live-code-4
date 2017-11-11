@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie</title>
+</head>
+<body>
+<h3>Movie</h3>
+<table>
+	<thead>
+		<td>Name</td>
+		<td>Released Year</td>
+		<td>Genre</td>
+		<td>Actions</td>
+	</thead>
+	<tbody>
+		<%movies.forEach(movie =>{%>
+			<tr>
+				<td><%=movie.name%></td>
+				<td><%=movie.released_year%></td>
+				<td><%=movie.genre%></td>
+				<td>
+					<a href="/movie/addCast/<%=movie.id%>">Add Cast</a>
+				</td>
+			</tr>
+		<%})%>
+	</tbody>
+</table>
+
+</body>
+</html>

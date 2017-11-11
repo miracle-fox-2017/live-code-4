@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cast</title>
+</head>
+<body>
+<h3>Casts</h3>
+<table>
+	<thead>
+		<td>Id</td>
+		<td>Name</td>
+		<td>Birth Year</td>
+		<td>Gender</td>
+		<td>Actions</td>
+	</thead>
+	<tbody>
+		<%casts.forEach(cast =>{%>
+			<tr>
+				<td><%=cast.id%></td>
+				<td><%=cast.getFullName()%></td>
+				<td><%=cast.birth_year%></td>
+				<td><%=cast.gender%></td>
+				<td>
+					<a href="/casts/edit/<%=cast.id%>">Edit</a>
+					<a href="/casts/delete/<%=cast.id%>">Delete</a>
+					<a href="/casts/seeMovie/<%=cast.id%>">See Movie</a>
+				</td>
+			</tr>
+		<%})%>
+	</tbody>
+</table>
+<br>
+<h3>Add New Cast</h3>
+<form action="/casts/add" method="post">
+  First name:<br>
+  <input type="text" name="first_name" placeholder="First Name">
+  <br>
+  Last name:<br>
+  <input type="text" name="last_name" placeholder="Last Name">
+  <br>
+  Birth Year:<br>
+  <input type="text" name="birth_year" placeholder="Birth Year">
+  <br>
+  Gender :<br>
+  <select name="gender">
+  	<option value="Male">Male</option>
+  	<option value="Female">Female</option>
+  </select> 
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
