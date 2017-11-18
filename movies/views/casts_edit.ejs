@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="" method="post">
+      <br>First Name: <input type="text" name="first_name" value="<%= cast.first_name %>" placeholder="first_name">
+      <br>Last Name: <input type="text" name="last_name" value="<%= cast.last_name %>" placeholder="last_name">
+      <br>Birth year: <input type="text" name="birth_year" value="<%= cast.birth_year %>" placeholder="birth_year">
+      <br>Gender:
+        <select class="" name="gender">
+          <!-- selected male else female -->
+          <% if(cast.gender=='male'){ %>
+            <option value="male" selected='selected' >Male</option>
+            <option value="female">Female</option>
+          <% } else { %>
+            <option value="male" >Male</option>
+            <option value="female" selected='selected' >Female</option>
+          <% } %>
+        </select>
+      <br><input type="submit" name="" value="SUBMIT">
+    </form>
+  </body>
+</html>

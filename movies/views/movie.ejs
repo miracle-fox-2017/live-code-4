@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <a href="/movies">movie</a> <a href="/casts">casts</a>
+    <table border="1">
+      <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>released_year</th>
+        <th>genre</th>
+        <th>Action</th>
+      </tr>
+      
+      <!-- looping disini -->
+      <% movies.forEach(movie=>{ %>
+          <tr>
+            <td><%= movie.id %></td>
+            <td><%= movie.name %></td>
+            <td><%= movie.released_year %></td>
+            <td><%= movie.genre %></td>
+            <td><a href="/movies/addcast/<%= movie.id %>">Add cast</a></td>
+            <!-- <td><a href="/casts/edit/<%= movie.id %>">Edit</a> | <a href="/casts/delete/<%= movie.id %>">Delete</a></td> -->
+          </tr>
+      <% }) %>
+    </table>
+  </body>
+</html>
