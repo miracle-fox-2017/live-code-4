@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%include ../partials/menu.ejs%>
+    <br>
+    <h2>Casts List</h2>
+    <table border="1">
+      <thead>
+        <th>Fullname</th>
+        <th>Birth Year</th>
+        <th>Gender</th>
+        <th>Option</th>
+      </thead>
+      <tbody>
+        <%casts.forEach(cast => {%>
+          <tr>
+            <td><%=cast.getFullName()%></td>
+            <td><%=cast.birth_year%></td>
+            <td><%=cast.gender%></td>
+            <td>
+              <a href="/casts/seemovie/<%=cast.id%>">see movie</a>
+              <a href="/casts/edit/<%=cast.id%>">edit</a>
+              <a href="/casts/delete/<%=cast.id%>">delete</a>
+            </td>
+          </tr>
+        <%})%>
+      </tbody>
+    </table>
+    <a href="/casts/add">add new cast</a>
+  </body>
+</html>

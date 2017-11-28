@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%include ../partials/menu.ejs%>
+    <br>
+    <h2>Edit Cast</h2>
+    <form action="/casts/edit/<%=cast.id%>" method="post">
+      <input type="text" name="first_name" placeholder="First Name" value="<%=cast.first_name%>"><br>
+      <input type="text" name="last_name" placeholder="Last Name" value="<%=cast.last_name%>"><br>
+      <input type="text" name="birth_year" placeholder="Birth Year" value="<%=cast.birth_year%>"><br>
+      <select name="gender">
+        <%let gender = ['male', 'female']%>
+        <%gender.forEach(gen => {
+          if(cast.gender == gen){%>
+            <option value="<%=gen%>" selected><%=gen%></option>
+          <%}else{%>
+            <option value="<%=gen%>"><%=gen%></option>
+        <%}
+        })%>
+      </select><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%include ../partials/menu.ejs%>
+    <br>
+    <h2>Cast Data</h2>
+    <p><b>Name : </b><%=cast.getFullName()%></p>
+    <table border="1">
+      <thead>
+        <th>Movie</th>
+        <th>Released Yead</th>
+        <th>Age</th>
+        <th>Role</th>
+      </thead>
+      <tbody>
+        <%cast.Movies.forEach(movie => {%>
+          <tr>
+            <td><%=movie.name%></td>
+            <td><%=movie.released_year%></td>
+            <td></td>
+            <td><%=movie.MovieCast.role%></td>
+          </tr>
+        <%})%>
+      </tbody>
+    </table>
+  </body>
+</html>

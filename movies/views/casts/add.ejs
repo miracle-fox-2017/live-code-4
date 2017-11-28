@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%include ../partials/menu.ejs%>
+    <br>
+    <h2>Add Cast</h2>
+    <form action="/casts/add" method="post">
+      <input type="text" name="first_name" placeholder="First Name"><br>
+      <input type="text" name="last_name" placeholder="Last Name"><br>
+      <input type="text" name="birth_year" placeholder="Birth Year"><br>
+      <select name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
