@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+
+<h3>Add Cast</h3>
+
+<div>
+  <form action="/movies/addcast/<%=dataMovie.id%>" method="POST">
+    <label for="fname"> Name</label>
+    <input type="text" id="fname" name="name" value="<%= dataMovie.name%>" >
+
+    <label for="lname">Realesed_year</label>
+    <input type="text" id="lname" name="realesed_year" value="<%= dataMovie.realesed_year%>">
+
+    <label for="lname">Genre</label>
+    <input type="text" id="lname" name="genre" value="<%= dataMovie.genre%>" placeholder="Your Birth..">
+
+    <label for="country">Cast</label>
+    <select id="country" name="CastId">
+      <%dataCasts.forEach(item => {%>
+        <option value="<%=item.id%>"><%=item.first_nama%></option>
+      <%})%>
+    </select>
+
+    <label for="lname">Role</label>
+    <input type="text" id="lname" name="role" value="" placeholder=" Role..">
+
+
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <h1>MOVIES</h1>
+  <table>
+    <th>No</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Released Year</th>
+    <th>Genre</th>
+    <th>Option</th>
+    <%let no = 1%>
+    <%dataMovies.forEach(item => {%>
+    <tbody>
+        <td><%=no++%></td>
+        <td><%= item.id%></td>
+        <td><%= item.name%></td>
+        <td><%= item.realesed_year%></td>
+        <td><%= item.genre%></td>
+        <td><a href="/movies/addcast/<%=item.id%>">Add Cast</a></td>
+        <td><a href="/movies/edit/<%item.id%>">Edit</a></td>
+        <td><a href="/movies/delete/<%item.id%>">Delete</a></td>
+
+    </tbody>
+    <%})%>
+  </table>
+</body>
+</html>
