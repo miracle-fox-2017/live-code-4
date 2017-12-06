@@ -1,0 +1,52 @@
+<%- include('assets/partials/header',{my_title:'casts',folder:''})%>
+
+  <div class="container">
+
+    <div style="text-align:center; margin-bottom:5%;">
+      <p class="title is-2">SUBJECT DATA</p>
+      <p class="subtitle is-4">show all table Cast | <a style="margin-top:0.4%;" class="button is-success is-small" href="/casts/add">
+        <span class="icon">
+          <i class="fa fa-user"></i>
+        </span>
+        <span>add cast</span>
+      </a></p>
+    </div>
+
+    <table class="table is-bordered is-striped is-narrow is-fullwidth">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>BIRTH YEAR</th>
+          <th>GENDER</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let i=0; i< data_Cast.length; i++){ %>
+        <tr>
+          <td><%=data_Cast[i].id%></td>
+          <td><%=`${data_Cast[i].first_name} ${data_Cast[i].last_name}`%></td>
+          <td><%=data_Cast[i].birth_year%></td>
+          <td><%=data_Cast[i].gender%></td>
+          <td style="margin-left:-5px;">
+              <a class="button is-info is-outlined is-small" href="/casts/edit/<%=data_Cast[i].id%>">
+              <span class="icon is-small">
+                <i class="fa fa-pencil"></i>
+              </span>
+              <span>Edit</span>
+              </a>
+              <a onclick="return confirm('are you sure to delete?!');" class="button is-danger is-outlined is-small" href="/casts/delete/<%=data_Cast[i].id%>">
+              <span class="icon is-small">
+                <i class="fa fa-times"></i>
+              </span>
+              <span>Delete</span>
+              </a>
+            </td>
+        </tr>
+        <%}%>
+      </tbody>
+    </table>
+  </div>
+
+<%- include assets/partials/footer %>
