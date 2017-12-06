@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CAST</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Fullname</th>
+				<th>Birth_Year</th>
+				<th>Gender</th>
+			</tr>
+		</thead>
+		<tbody>
+		<% allCast.forEach(cast => {%>
+			<tr>
+				<td> <%= cast.getFullName() %> </td>
+				<td> <%= cast.birth_year %> </td>
+				<td> <%= cast.gender %> </td>
+				<td> <a href="/casts/edit/	<%= cast.id %>"> edit </a> </td>
+				<td> <a href="/casts/delete/	<%= cast.id %>"> delete </a> </td>
+			</tr>	
+		<%})%>
+		</tbody>
+	</table>
+
+	<a href="/casts/add"> add </a>
+</body>
+</html>

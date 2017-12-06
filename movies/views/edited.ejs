@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ADD</title>
+</head>
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>first_name</th>
+				<th>last_name</th>
+				<th>birth_year</th>
+				<th>gender</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<form action="/casts/edit/<%= edited.id %> " method="POST">
+				<td> <input type="text" name="first_name" value="<%= edited.first_name %>" > </td>
+				<td> <input type="text" name="last_name" value="<%= edited.last_name %>"> </td>
+				<td> <input type="text" name="birth_year" value="<%= edited.birth_year%> "> </td>
+				<td><select name="gender">
+					<% if(edited.gender == "female"){%>
+						<option value="female" selected> female </option>
+						<option value="male"> male </option>
+					<%}else{%>
+						<option value="female" > female </option>
+						<option value="male" selected> male </option>
+					<%}%>	
+				</select></td>
+					<td> <input type="submit" value="edited"></td>
+				</form>
+			</tr>	
+		</tbody>
+	</table>
+
+</body>
+</html>
