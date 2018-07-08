@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HALAMAN EDIT CAST</title>
+    <style type = "text/css">
+
+      .font {
+        font-family : sans-serif;
+      }
+      .tengah {
+        text-align :center;
+      }
+
+    </style>
+  </head>
+  <body style="background-color : #FF2020">
+    <fieldset>
+      <legend class = "font">EDIT CAST</legend>
+        <form action="/casts/edit/<%= rowEditCast.id %>" method="post">
+          <table border = "0"  class = "font">
+            <tr>
+              <td>First Name</td>
+              <td>:</td>
+              <td><input type="text" name="first_name" value = "<%= rowEditCast.first_name %>"></td>
+            </tr>
+
+            <tr>
+              <td>Last Name</td>
+              <td>:</td>
+              <td><input type="text" name="last_name" value = "<%= rowEditCast.last_name %>"></td>
+            </tr>
+
+            <tr>
+              <td>Birth Year</td>
+              <td>:</td>
+              <td><input type="text" name="birth_year" value = "<%= rowEditCast.birth_year %>"></td>
+            </tr>
+
+            <tr>
+              <td>Gender</td>
+              <td>:</td>
+              <td>
+                <select name="gender">
+                  <option>SELECT</option>
+                  <% if(rowEditCast.gender === "Male") { %>
+                    <option selected>Male</option>
+                    <option>Female</option>
+                  <% } else { %>
+                    <option>Male</option>
+                    <option selected>Female</option>
+                </select>
+                  <% } %>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td><input type="submit" value= "Edit Cast"></td>
+            </tr>
+
+        </form>
+    </fieldset>
+  </body>
+</html>
