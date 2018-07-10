@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<table align="center">
+  <tr>
+      
+    <th>ID</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>BirthDate</th>
+    <th>Gender</th>
+  </tr>
+    <tr><%dataCast.forEach(data=>{%>
+      <td><%=data.id%></td>
+      <td><%=data.first_name%></td>
+      <td><%=data.last_name%></td>
+      <td><%=data.birth_year%></td>
+      <td><%=data.gender%></td>
+      <td><a href="casts/delete/<%=data.id%>">Delete</td>
+      <td><a href="casts/edit/<%=data.id%>">Edit</td>
+    </tr>
+    <%})%>
+<p><a href="casts/addCast">Add Cast</a></p>
+</table>
+
+
+</body>
+</html>
