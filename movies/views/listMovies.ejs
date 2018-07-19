@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Movie</title>
+    <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/movies">Movie</a></li>
+      <li><a href="/casts">Cast</a></li>
+    </ul>
+    <h1><%=dataDetails.getFullName()%></h1>
+    <table style="width:50%">
+      <tr>
+        <th>Movie</th>
+        <th>Release Year</th>
+        <th>Age when Movie Released</th>
+        <th>Role</th>
+      </tr>
+
+      <%dataDetails.Movies.forEach(movie=>{%>
+        <tr>
+          <td><%=movie.name%></td>
+          <td><%=movie.released_year%></td>
+          <td><%=Umur(+movie.released_year,+dataDetails.birth_year)%> years old</td>
+          <td><%=movie.MovieCast.role%></td>
+        </tr>
+      <%})%>
+
+    </table>
+  </body>
+</html>

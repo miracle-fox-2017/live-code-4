@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add Cast to Movie</title>
+  </head>
+  <body>
+    <h1><%=dataMovie.name%></h1>
+    <form action="/movies/<%=dataMovie.id%>/addCast" method="post">
+      <br>
+      <select name="CastId">
+        <%dataCasts.forEach(casts=>{%>
+          <option value="<%=casts.id%>"><%=casts.getFullName()%></option>
+        <%})%>
+      </select>
+      <br>
+      <br>
+      <input type="text" name="role" ><br>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+
+  </body>
+</html>
